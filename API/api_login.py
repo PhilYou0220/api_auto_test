@@ -1,8 +1,7 @@
 import requests
 import hashlib
-import json
 import time
-
+import json
 
 class Login(object):
     def pre_login(self, username, password):
@@ -14,6 +13,3 @@ class Login(object):
         data = {}
         r = requests.post(url, password)
         return r.json()
-
-
-
