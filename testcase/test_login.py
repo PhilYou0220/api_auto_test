@@ -1,6 +1,6 @@
 import requests
 
-from tools.read_json import ReadJson
+from my_tools.read_json import ReadJson
 
 
 # def get_data():
