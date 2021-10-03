@@ -1,9 +1,10 @@
 import requests
 import unittest
-from tools.auth_post import AuthPost
-from tools.get_data import GetData
-from tools.read_json import ReadJson
+from my_tools.auth_post import AuthPost
+from my_tools.get_data import GetData
+from my_tools.read_json import ReadJson
 from parameterized import parameterized
+
 
 # def get_data():
 #     data = ReadJson("video_check/vc_area.json").read_json()
