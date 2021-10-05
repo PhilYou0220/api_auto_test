@@ -3,7 +3,7 @@ import hashlib
 import time
 import json
 
-from tools.read_json import ReadJson
+from my_tools.read_json import ReadJson
 
 
 class AuthPost(object):
@@ -44,9 +44,11 @@ class AuthPost(object):
             "shomes-sign": shomes_sign
         }
 
-        real_r = requests.post(url=url, json=data2, headers=headers).json()
+        resp = requests.post(url=url, json=data2, headers=headers)
+        real_r = resp.json()
+        real_status_code = resp.status_code
         # print(real_r)
-        return real_r
+        return real_r, real_status_code
 
 
 

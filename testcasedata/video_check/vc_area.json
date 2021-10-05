@@ -3,12 +3,14 @@
   "url": "https://ticketapi.shomes.cn/-/select-option/area",
   "data": "",
   "username": "youfei",
-  "password": "1"
+  "password": "1",
+  "status_code": 200
 },
 "vc_area_case2":{
   "url": "https://ticketapi.shomes.cn/-/select-option/area",
   "data": "",
   "username": "13608031977",
-  "password": "youfei123"
+  "password": "youfei123",
+  "status_code": 200
 }
 }

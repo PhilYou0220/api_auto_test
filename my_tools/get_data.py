@@ -1,4 +1,4 @@
-from tools.read_json import ReadJson
+from my_tools.read_json import ReadJson
 
 
 class GetData(object):
