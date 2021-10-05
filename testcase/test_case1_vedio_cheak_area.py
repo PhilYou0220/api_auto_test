@@ -6,8 +6,6 @@ from my_tools.get_data import GetData
 from my_tools.read_json import ReadJson
 from parameterized import parameterized
 
-
-
 # def get_data():
 #     data = ReadJson("video_check/vc_area.json").read_json()
 #     test_data = []
@@ -29,9 +27,10 @@ class TestVideoCheck(unittest.TestCase):
 
     # 格式 parameterized.expand列表里嵌套元组 [()]一个元组算一条用例
     @parameterized.expand(a)
-    def test_video_check_area(self, url, data, username, password):
-        r = AuthPost().auth_post(url, data, username, password)
-        print(r)
+    def test_video_check_area(self, url, data, username, password, status_code):
+        real_r, real_status_code = AuthPost().auth_post(url, data, username, password)  # 接收两个参数
+        self.assertEqual(status_code, real_status_code)  # 断言状态码，不一致将报错
+        # print(real_r)
 
     def tearDown(self) -> None:
         print("结束")
